@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Crud_apiget() {
     let [record, setRecord] = useState([]);
@@ -16,6 +16,8 @@ export default function Crud_apiget() {
     let [pswd, setPswd] = useState("");
     let [id, setId] = useState(null);
     let [age, setAge] = useState(0);
+    let Loc = useLocation()
+    let user_name = Loc.state?.n;
 
     let mock_url = "https://67ad88033f5a4e1477ddf5ae.mockapi.io/mocapi";
 
@@ -113,7 +115,7 @@ export default function Crud_apiget() {
 
     return (
         <div className='container'>
-            <h1>Student Data</h1>
+            <h1>Welcome{user_name}</h1>
             <Link className="btn btn-warning my-3" to="/s">Add Student +</Link>
             <input
                 type="text"
