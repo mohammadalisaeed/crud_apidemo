@@ -6,7 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import "bootstrap/dist/js/bootstrap.bundle.js"
-// import MocapiTest from './Compo/MocapiTest';
+import Mocapi_Ass from './Compo/Mocapi_Ass';
 import Login from './Compo/Login';
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
 
         <Route path='/cr' element={<Crud_apiget/>}/>
         <Route path='/' element={<Login/>}/>
-       
+      
        </Routes>
+       <Mocapi_Ass/>
     </div>
     // </BrowserRouter>
   );
